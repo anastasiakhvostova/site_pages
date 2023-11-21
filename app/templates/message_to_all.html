@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{ title }}</title>
+{% endblock %}
+
+
+{% block content %}
+{% if user %}
+<form class="row g-3" method="post" onsubmit="sendMessage(event); window.location.href = '/web/message'">
+<!--<form class="row g-3" onsubmit="sendMessage(event)">-->
+
+    <div class="mb-3">
+      <label for="messageText" class="form-label">{{ title }}</label>
+      <textarea class="form-control" id="messageText" rows="3" name="message" required minlength="5"></textarea>
+    </div>
+
+    <button class="btn btn-outline-success" type="submit">Відправити повідомлення</button>
+    </form>
+{% else %}
+        <p class="h1"> Спершу зареєструйся!</p>
+{% endif %}
+{% for element in data %}
+   <p class="h4"> {{ element.comment }}</p>
+   <p class="h6"> {{ element.created_at }}</p>
+{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{ title }}</title>
+{% endblock %}
+
+
+{% block content %}
+<p class="h1">{{ title }}</p>
+
+<p>Ми є в таких містах: Дніпро, Київ, Одеса, Харків, Запоріжжя, Нікополь, Львів, Тернопіль, Луцьк</p>
+
+<p>Інтернет-магазин
+support@book-ye.com.ua
+044 333 42 20
+080 033 05 66
+ Графік роботи з 9.00 до 21.00 без вихідних</p>
+<img src="{{ url_for('static', path='image/shop1.png') }}" alt="" width="400" height="400">
+<p> Книгарня Дніпро: Сонячна Набережна 20</p>
+<img src="{{ url_for('static', path='image/shop2.png') }}" alt="" width="400" height="400">
+<p> Книгарня Київ: Володимира Великого 5</p>
+<img src="{{ url_for('static', path='image/shop3.png') }}" alt="" width="400" height="400">
+<p> Книгарня Харків:Лесі Українки 16</p>
+{% endblock %}
